@@ -1,0 +1,154 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* hiding scrollbars */
+@media screen and (max-width: 768px){
+  ::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+}
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+.app {
+  background: rgb(130,105,246);
+  background: -moz-radial-gradient(circle, rgba(130,105,246,1) 0%, rgba(17,48,249,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(130,105,246,1) 0%, rgba(17,48,249,1) 100%);
+  background: radial-gradient(circle, rgba(130,105,246,1) 0%, rgba(17,48,249,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8269f6",endColorstr="#1130f9",GradientType=1);
+}
+
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+.auth-card {
+  min-width: 95%;
+}
+
+.auth-input {
+  background: rgba(rgb(175, 205, 236), green, blue, .4);
+  padding: 5px;
+}
+
+.container-fluid {
+  flex: 1 1 auto;
+  width: 100%; /**?????????*/
+}
+
+.glassy {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* home dcreen  */
+
+/* carousel with cards */
+/*   flex flex-row overflow-x-auto py-5 */
+.cards-carousel {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+/*  glassy relative m-3 mx-2 */
+
+.new-quiz-card {
+  position: relative;
+  margin: 0px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 0;
+}
+
+.card-image {
+  margin: 0px;
+  object-fit: cover;
+  height: 200px;
+  width: 300px;
+  min-width: 300px;
+  border-radius: 16px;
+  opacity: .8;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 16px 16px;
+  color: white;
+  background-color: rgba(0, 115, 255, 0.816);
+  padding: 25px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+
+.correct-answer {
+  background: #76ce92;
+}
+
+.incorrect-answer {
+  background: rgb(229, 98, 98);
+}
+
+.emoji-res {
+  font-size: 120px;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 0.9;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.01;
+  }
+}
+
+
+.fade-in {
+  animation: fadeIn .3s ease-in;
+  animation-fill-mode: forwards;  
+}
+
+.fade-out {
+  animation: fadeOut .3s ease-in;
+  animation-fill-mode: forwards;  
+}
+
+.zoom {
+  animation: zoom .3s ease-in;
+  animation-fill-mode: forwards;  
+}

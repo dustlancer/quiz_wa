@@ -418,6 +418,9 @@ let quizes_list = [
     },
 ]
 
+let tg = window.Telegram.WebApp;
+let un = tg.initDataUnsafe.user.username
+
 
 
 let cleanScreen = () => {
@@ -443,7 +446,7 @@ window.addEventListener('login_success', () => {
 
 
 
-sessionStorage.removeItem("username");
+// sessionStorage.removeItem("username");
 
 // router 
 
@@ -451,6 +454,7 @@ sessionStorage.removeItem("username");
 window.addEventListener('change_route', (e)=> {
     cleanScreen();
     setTimeout(() => {
+        alert(un);
         if (sessionStorage.getItem("username")) {
             switch (e.detail.route)  {
                 case 'home':
